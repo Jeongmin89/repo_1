@@ -7,6 +7,35 @@
  (웹/휴대폰/CLI/단축어)
 ```
 
+## 📱 스마트폰만으로 쓰기 (추천) — 사진설명톡 웹앱
+
+PC나 서버 없이 **휴대폰 브라우저에서 사진을 골라** 바로 보내는 웹앱이 `docs/` 폴더에 있습니다.
+GitHub Pages로 무료 배포되며, 주소는 **https://jeongmin89.github.io/repo_1/** 입니다.
+
+### 최초 1회 설정
+1. **GitHub Pages 켜기**: 저장소 → Settings → Pages → Source: *Deploy from a branch* →
+   Branch: `claude/photo-description-kakao-automation-yf3giv`, 폴더 `/docs` → Save (1~2분 후 주소 활성화)
+2. **Kakao Developers** ([developers.kakao.com](https://developers.kakao.com)) 에서 앱 생성 후
+   - 앱 키의 **REST API 키** 복사
+   - 플랫폼 → **Web 사이트 도메인**: `https://jeongmin89.github.io`
+   - 카카오 로그인 **활성화 ON**, **Redirect URI**: `https://jeongmin89.github.io/repo_1/`
+   - 동의항목 → **카카오톡 메시지 전송(talk_message)** 사용 설정
+   - 보안 → Client Secret 을 사용 중이면 그 값도 복사 (웹앱 설정에 입력)
+3. **Claude API 키** 발급: [platform.claude.com](https://platform.claude.com/) → 크레딧 충전 → API Keys
+4. 휴대폰에서 웹앱 주소 접속 → **⚙️ 설정**에 키 입력·저장 → **카카오 연결** → 카카오톡으로 로그인
+5. (선택) 브라우저 메뉴 → **홈 화면에 추가** 하면 앱처럼 아이콘으로 실행됩니다.
+
+### 사용
+**📷 사진 고르기** → 갤러리에서 선택(여러 장 가능) 또는 촬영 → (선택) 메모 → **보내기** →
+카카오톡 '나와의 채팅'에 설명이 도착합니다.
+
+> 키는 그 휴대폰 브라우저에만 저장되고 Claude·카카오 서버로만 전송됩니다. 다른 사람에게 휴대폰을 빌려줄 때는 주의하세요.
+> 설정에서 모델을 **Haiku 5.5**로 바꾸면 비용이 1장당 몇 원 수준으로 줄어듭니다.
+
+---
+
+## PC/서버 버전 (Python)
+
 ## 기능
 - 휴대폰 브라우저에서도 쓸 수 있는 업로드 웹 페이지 (`/`)
 - 자동화용 JSON API (`POST /api/photos`) — iOS 단축어, 안드로이드 Tasker 등과 연동

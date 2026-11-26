@@ -1,0 +1,9 @@
+{
+  "name": "사진 설명 → 카카오톡",
+  "short_name": "사진설명톡",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#FEE500",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}
